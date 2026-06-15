@@ -20,6 +20,15 @@ import Contador from "./components/Contador";
 import ListaContactos from "./components/ListaContactos";
 import FormularioEvento from "./components/FormularioEvento";
 
+// ============================================
+// LABORATORIO 4 - useEffect y Custom Hooks
+// ============================================
+import VisorDocumento from "./components/VisorDocumento";
+import TemporizadorPomodoro from "./components/TemporizadorPomodoro";
+import ConfiguracionUsuario from "./components/ConfiguracionUsuario";
+import DemoLocalStorage from "./components/DemoLocalStorage";
+import DemoNotification from "./components/DemoNotification";
+
 function App() {
   return (
     <div style={styles.container}>
@@ -32,67 +41,41 @@ function App() {
       {/* ========================================== */}
       <div style={styles.labSection}>
         <h2 style={styles.labTitle}>📗 Laboratorio 2 - Primeros Componentes con JSX</h2>
-        
-        {/* Ejercicio 1 - Perfil */}
+
         <Acordeon titulo="📌 Ejercicio 1: Perfil Profesional">
           <Perfil />
         </Acordeon>
 
-        {/* Ejercicio 2 - Clima */}
         <Acordeon titulo="🌤️ Ejercicio 2: Información del Clima">
           <Clima />
         </Acordeon>
 
-        {/* Ejercicio 3 - Estado del Pedido */}
         <Acordeon titulo="📦 Ejercicio 3: Estado del Pedido">
           <EstadoPedido />
         </Acordeon>
 
-        {/* Ejercicio 4 - Mensaje de Bienvenida */}
         <Acordeon titulo="🔐 Ejercicio 4: Mensaje de Bienvenida">
           <MensajeBienvenida />
         </Acordeon>
 
-        {/* Ejercicio 5 - Lista de Habilidades */}
         <Acordeon titulo="📚 Ejercicio 5: Habilidades Técnicas">
           <ListaHabilidades />
         </Acordeon>
 
-        {/* Ejercicio 6 - Lista de Productos */}
         <Acordeon titulo="🛒 Ejercicio 6: Lista de Productos">
           <ListaProductos />
         </Acordeon>
 
-        {/* Ejercicio 7 - Lista de Tareas */}
         <Acordeon titulo="✅ Ejercicio 7: Lista de Tareas">
           <ListaTareas />
         </Acordeon>
 
-        {/* Ejercicio 8 - Tarjeta */}
         <Acordeon titulo="🃏 Ejercicio 8: Tarjeta Reutilizable">
           <Tarjeta />
         </Acordeon>
 
-        {/* Ejercicio 9 - Dashboard */}
         <Acordeon titulo="📊 Ejercicio 9: Dashboard de Usuario">
           <Dashboard />
-        </Acordeon>
-
-        {/* Ejercicio 10 - Demostración de Alerta (Lab 3 sección) */}
-        <Acordeon titulo="🎨 Ejercicio 10: Demostración de Componente Alerta">
-          <h3>Componente Alerta - Demostración de los 4 tipos</h3>
-          <Alerta tipo="exito" titulo="¡Operación exitosa!">
-            Los datos se guardaron correctamente.
-          </Alerta>
-          <Alerta tipo="advertencia" titulo="Advertencia">
-            Tu sesión expirará en 5 minutos.
-          </Alerta>
-          <Alerta tipo="error" titulo="Error crítico">
-            No se pudo conectar con el servidor.
-          </Alerta>
-          <Alerta tipo="info" titulo="Información">
-            El sistema se actualizará esta noche.
-          </Alerta>
         </Acordeon>
       </div>
 
@@ -102,26 +85,51 @@ function App() {
       <div style={styles.labSection}>
         <h2 style={styles.labTitle}>📘 Laboratorio 3 - Props, Estado y Eventos</h2>
 
-        {/* Ejercicio 1 - Alerta y Acordeón (ya demostrado arriba) */}
-        <Acordeon titulo="📌 Ejercicio 1: Acordeón (este componente)">
-          <p>Este mismo componente Acordeón es el resultado del Ejercicio 1 del Laboratorio 3.</p>
-          <p>✅ Puedes abrir y cerrar cada sección haciendo clic en el título.</p>
-          <p>✅ El indicador ►/▼ muestra el estado actual.</p>
+        <Acordeon titulo="📌 Ejercicio 1: Componente Alerta y Acordeón">
+          <h3>Tipos de Alerta:</h3>
+          <Alerta tipo="exito" titulo="Éxito">Operación completada</Alerta>
+          <Alerta tipo="advertencia" titulo="Advertencia">Revisa tus datos</Alerta>
+          <Alerta tipo="error" titulo="Error">Algo salió mal</Alerta>
+          <Alerta tipo="info" titulo="Info">Novedades disponibles</Alerta>
         </Acordeon>
 
-        {/* Ejercicio 2 - Contador */}
         <Acordeon titulo="🔢 Ejercicio 2: Contador Interactivo">
           <Contador />
         </Acordeon>
 
-        {/* Ejercicio 3 - Lista de Contactos */}
         <Acordeon titulo="📞 Ejercicio 3: Lista de Contactos">
           <ListaContactos />
         </Acordeon>
 
-        {/* Ejercicio 4 - Formulario de Evento */}
         <Acordeon titulo="📅 Ejercicio 4: Formulario de Evento">
           <FormularioEvento />
+        </Acordeon>
+      </div>
+
+      {/* ========================================== */}
+      {/* SECCIÓN: LABORATORIO 4 */}
+      {/* ========================================== */}
+      <div style={styles.labSection}>
+        <h2 style={styles.labTitle}>📙 Laboratorio 4 - useEffect y Custom Hooks</h2>
+
+        <Acordeon titulo="📄 Ejercicio 1: Visor de Documento (Sincronización con título)">
+          <VisorDocumento />
+        </Acordeon>
+
+        <Acordeon titulo="🍅 Ejercicio 2: Temporizador Pomodoro">
+          <TemporizadorPomodoro />
+        </Acordeon>
+
+        <Acordeon titulo="⚙️ Ejercicio 3: Configuración de Usuario (localStorage)">
+          <ConfiguracionUsuario />
+        </Acordeon>
+
+        <Acordeon titulo="💾 Ejercicio 4: Custom Hook - useLocalStorage">
+          <DemoLocalStorage />
+        </Acordeon>
+
+        <Acordeon titulo="🔔 Ejercicio 4: Custom Hook - useNotification">
+          <DemoNotification />
         </Acordeon>
       </div>
     </div>
