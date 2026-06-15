@@ -1,3 +1,6 @@
+// ============================================
+// LABORATORIO 2 - Componentes básicos con JSX
+// ============================================
 import Perfil from "./components/Perfil";
 import Clima from "./components/Clima";
 import EstadoPedido from "./components/EstadoPedido";
@@ -8,55 +11,119 @@ import ListaTareas from "./components/ListaTareas";
 import Tarjeta from "./components/Tarjeta";
 import Dashboard from "./components/Dashboard";
 
+// ============================================
+// LABORATORIO 3 - Props, Estado y Eventos
+// ============================================
+import Alerta from "./components/Alerta";
+import Acordeon from "./components/Acordeon";
+import Contador from "./components/Contador";
+import ListaContactos from "./components/ListaContactos";
+import FormularioEvento from "./components/FormularioEvento";
+
 function App() {
   return (
     <div style={styles.container}>
-      <h1 style={styles.title}>📘 Laboratorio 2 - Primeros Componentes con JSX</h1>
+      <h1 style={styles.title}>
+        📚 Portafolio de Laboratorios - Programación Web Avanzada
+      </h1>
 
-      <section style={styles.section}>
-        <h2 style={styles.subtitle}>📌 Ejercicio 1 - Perfil</h2>
-        <Perfil />
-      </section>
+      {/* ========================================== */}
+      {/* SECCIÓN: LABORATORIO 2 */}
+      {/* ========================================== */}
+      <div style={styles.labSection}>
+        <h2 style={styles.labTitle}>📗 Laboratorio 2 - Primeros Componentes con JSX</h2>
+        
+        {/* Ejercicio 1 - Perfil */}
+        <Acordeon titulo="📌 Ejercicio 1: Perfil Profesional">
+          <Perfil />
+        </Acordeon>
 
-      <section style={styles.section}>
-        <h2 style={styles.subtitle}>🌤️ Ejercicio 2 - Clima</h2>
-        <Clima />
-      </section>
+        {/* Ejercicio 2 - Clima */}
+        <Acordeon titulo="🌤️ Ejercicio 2: Información del Clima">
+          <Clima />
+        </Acordeon>
 
-      <section style={styles.section}>
-        <h2 style={styles.subtitle}>📦 Ejercicio 3 - Estado del pedido</h2>
-        <EstadoPedido />
-      </section>
+        {/* Ejercicio 3 - Estado del Pedido */}
+        <Acordeon titulo="📦 Ejercicio 3: Estado del Pedido">
+          <EstadoPedido />
+        </Acordeon>
 
-      <section style={styles.section}>
-        <h2 style={styles.subtitle}>🔐 Ejercicio 4 - Mensaje de bienvenida</h2>
-        <MensajeBienvenida />
-      </section>
+        {/* Ejercicio 4 - Mensaje de Bienvenida */}
+        <Acordeon titulo="🔐 Ejercicio 4: Mensaje de Bienvenida">
+          <MensajeBienvenida />
+        </Acordeon>
 
-      <section style={styles.section}>
-        <h2 style={styles.subtitle}>📚 Ejercicio 5 - Habilidades técnicas</h2>
-        <ListaHabilidades />
-      </section>
+        {/* Ejercicio 5 - Lista de Habilidades */}
+        <Acordeon titulo="📚 Ejercicio 5: Habilidades Técnicas">
+          <ListaHabilidades />
+        </Acordeon>
 
-      <section style={styles.section}>
-        <h2 style={styles.subtitle}>🛒 Ejercicio 6 - Lista de productos</h2>
-        <ListaProductos />
-      </section>
+        {/* Ejercicio 6 - Lista de Productos */}
+        <Acordeon titulo="🛒 Ejercicio 6: Lista de Productos">
+          <ListaProductos />
+        </Acordeon>
 
-      <section style={styles.section}>
-        <h2 style={styles.subtitle}>✅ Ejercicio 7 - Lista de tareas</h2>
-        <ListaTareas />
-      </section>
+        {/* Ejercicio 7 - Lista de Tareas */}
+        <Acordeon titulo="✅ Ejercicio 7: Lista de Tareas">
+          <ListaTareas />
+        </Acordeon>
 
-      <section style={styles.section}>
-        <h2 style={styles.subtitle}>🃏 Ejercicio 8 - Tarjeta</h2>
-        <Tarjeta />
-      </section>
+        {/* Ejercicio 8 - Tarjeta */}
+        <Acordeon titulo="🃏 Ejercicio 8: Tarjeta Reutilizable">
+          <Tarjeta />
+        </Acordeon>
 
-      <section style={styles.section}>
-        <h2 style={styles.subtitle}>📊 Ejercicio 9 - Dashboard</h2>
-        <Dashboard />
-      </section>
+        {/* Ejercicio 9 - Dashboard */}
+        <Acordeon titulo="📊 Ejercicio 9: Dashboard de Usuario">
+          <Dashboard />
+        </Acordeon>
+
+        {/* Ejercicio 10 - Demostración de Alerta (Lab 3 sección) */}
+        <Acordeon titulo="🎨 Ejercicio 10: Demostración de Componente Alerta">
+          <h3>Componente Alerta - Demostración de los 4 tipos</h3>
+          <Alerta tipo="exito" titulo="¡Operación exitosa!">
+            Los datos se guardaron correctamente.
+          </Alerta>
+          <Alerta tipo="advertencia" titulo="Advertencia">
+            Tu sesión expirará en 5 minutos.
+          </Alerta>
+          <Alerta tipo="error" titulo="Error crítico">
+            No se pudo conectar con el servidor.
+          </Alerta>
+          <Alerta tipo="info" titulo="Información">
+            El sistema se actualizará esta noche.
+          </Alerta>
+        </Acordeon>
+      </div>
+
+      {/* ========================================== */}
+      {/* SECCIÓN: LABORATORIO 3 */}
+      {/* ========================================== */}
+      <div style={styles.labSection}>
+        <h2 style={styles.labTitle}>📘 Laboratorio 3 - Props, Estado y Eventos</h2>
+
+        {/* Ejercicio 1 - Alerta y Acordeón (ya demostrado arriba) */}
+        <Acordeon titulo="📌 Ejercicio 1: Acordeón (este componente)">
+          <p>Este mismo componente Acordeón es el resultado del Ejercicio 1 del Laboratorio 3.</p>
+          <p>✅ Puedes abrir y cerrar cada sección haciendo clic en el título.</p>
+          <p>✅ El indicador ►/▼ muestra el estado actual.</p>
+        </Acordeon>
+
+        {/* Ejercicio 2 - Contador */}
+        <Acordeon titulo="🔢 Ejercicio 2: Contador Interactivo">
+          <Contador />
+        </Acordeon>
+
+        {/* Ejercicio 3 - Lista de Contactos */}
+        <Acordeon titulo="📞 Ejercicio 3: Lista de Contactos">
+          <ListaContactos />
+        </Acordeon>
+
+        {/* Ejercicio 4 - Formulario de Evento */}
+        <Acordeon titulo="📅 Ejercicio 4: Formulario de Evento">
+          <FormularioEvento />
+        </Acordeon>
+      </div>
     </div>
   );
 }
@@ -67,27 +134,30 @@ const styles = {
     margin: "0 auto",
     padding: "20px",
     fontFamily: "Arial, sans-serif",
-    backgroundColor: "#f5f5f5",
+    backgroundColor: "#f0f2f5",
+    minHeight: "100vh",
   },
   title: {
     textAlign: "center",
-    color: "#333",
+    color: "#1a1a2e",
     borderBottom: "3px solid #007bff",
-    paddingBottom: "10px",
+    paddingBottom: "15px",
     marginBottom: "30px",
+    fontSize: "28px",
   },
-  subtitle: {
+  labSection: {
+    marginBottom: "40px",
+    padding: "20px",
+    backgroundColor: "white",
+    borderRadius: "12px",
+    boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+  },
+  labTitle: {
     color: "#007bff",
     borderLeft: "4px solid #007bff",
-    paddingLeft: "12px",
-    marginBottom: "10px",
-  },
-  section: {
-    backgroundColor: "white",
-    borderRadius: "8px",
+    paddingLeft: "15px",
     marginBottom: "20px",
-    padding: "10px",
-    boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+    marginTop: 0,
   },
 };
 
